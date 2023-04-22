@@ -1,6 +1,2 @@
-FROM node:18-alpine
-WORKDIR /app
-COPY . .
-RUN yarn install --production
-CMD ["node", "src/index.js"]
-EXPOSE 8000
+FROM httpd:2.4
+COPY . /usr/local/apache2/htdocs/
